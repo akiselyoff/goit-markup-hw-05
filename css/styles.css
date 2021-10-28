@@ -165,8 +165,9 @@ a,
 }
 
 .hero-title {
+  width: 696px;
   margin: 0 auto 30px;
-  padding: 0 267px;
+
   font-weight: 900;
   font-size: 44px;
   line-height: 1.36;
@@ -240,6 +241,7 @@ a,
   height: 18px;
   display: block;
 }
+
 .features-list {
   display: flex;
   justify-content: space-between;
@@ -419,8 +421,8 @@ a,
   background-color: var(--prime-background-color);
   /* border: 1px solid #eeeeee;                                вместо border в .project-item > .content */
 }
-.project-item:hover,
-.project-item:focus {
+.project-item .wrap-link:hover,
+.project-item .wrap-link:focus {
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
     1px 4px 6px rgba(0, 0, 0, 0.16);
 }
@@ -430,8 +432,12 @@ a,
 .project-item:nth-last-child(-n + 3) {
   margin-bottom: 0;
 }
+.project-item .wrap-link {
+  display: block;
 
-.project-item > .content {
+  text-decoration: none;
+}
+.project-item .content {
   display: flex;
   flex-direction: column;
   padding: 20px 24px;
@@ -446,6 +452,7 @@ a,
   font-size: 18px;
   line-height: 2;
   letter-spacing: 0.06em;
+  color: var(--secondary-text-color);
 }
 .project-item .project-type {
   margin: 0;
@@ -463,14 +470,14 @@ a,
   margin-right: 30px;
   width: 170px;
   height: 92px;
-  border: 1px solid var(--prime-icon-color);
-  box-sizing: border-box;
-  border-radius: 4px;
 }
 .partners-list-item:last-child {
   margin-right: 0;
 }
 .partner-link {
+  border: 1px solid var(--prime-icon-color);
+  box-sizing: border-box;
+  border-radius: 4px;
   fill: var(--prime-icon-color);
   display: flex;
   justify-content: center;
@@ -480,10 +487,11 @@ a,
 }
 .partner-link:hover,
 .partner-link:focus {
-  border: 1px solid var(--active-text-color);
   fill: var(--active-text-color);
+  border: 1px solid var(--active-text-color);
   cursor: pointer;
 }
+
 .partners-list-item .icon {
   width: 106px;
   height: 60px;
@@ -508,6 +516,7 @@ a,
   flex-direction: column;
 }
 .social-container .title {
+  text-transform: uppercase;
   margin-top: 0;
   margin-bottom: 20px;
   font-weight: 700;
@@ -518,6 +527,7 @@ a,
 }
 .footer .social-link {
   background-color: rgba(255, 255, 255, 0.1);
+  fill: #ffffff;
 }
 .footer .social-link:hover,
 .footer .social-link:focus {
@@ -551,9 +561,7 @@ a,
 }
 .footer .contacts-list .link {
   padding: 0;
-  font-size: inherit;
-  font-style: inherit;
   font-weight: inherit;
-  line-height: inherit;
-  letter-spacing: inherit;
+  line-height: 1.71;
+  letter-spacing: 0.03em;
 }
